@@ -21,16 +21,8 @@ session = requests.Session()
 def get_Links(place):
         links = place.find_all('a')  # Find all <a> tags
         urls = [link.get('href') for link in links if link.get('href')]
-        output = []
-        for link in urls:
-            if link.startswith("https://www.indiabix.com"):
-                output.append(link)
-            else:
-                link = f"https://www.indiabix.com{link}"
-                output.append(link)
-            print(link)
-        return output
-def get_indiaBix():
+        return urls
+def get_jobSpider():
     url = 'https://www.indiabix.com/'
     headers = {'User-Agent': UserAgent}  # Corrected header name
 
@@ -98,4 +90,4 @@ def get_indiaBix():
         print(f'UMPALUMPA Other error occurred: {err}')
 #Here to code
 print('I Do start')
-get_indiaBix()
+get_jobSpider()
