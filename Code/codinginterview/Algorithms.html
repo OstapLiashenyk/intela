@@ -1,0 +1,251 @@
+AlgorithmsAlgorithmsAlgorithmsAlgorithmsAlgorithms<br>1. What is an algorithm?<br>______________________________________________<br>Algorithms provide a systematic approach to solving a problem by defining the step-by-step solution in a well-defined formal language. This includes information about calculations, data processing, automated decision-making, and other tasks. Simply put, it defines the computational procedure to take an input value and generate an output value.
+​
+​
+​
+​
+​
+​
+ <br>______________________________________________<br>2. How can you determine the complexity of an algorithm?<br>______________________________________________<br>The computational complexity of an algorithm can help you determine the efficiency of one algorithm compared to another. You can measure it using two parameters — time complexity and space complexity:
+​
+1. Time complexity:
+It measures the algorithm's efficiency by the time it takes to run an algorithm as a function of the input size. Time complexity is measured by asymptotic analysis and represented by the asymptotic notation, which is as follows:
+a. Big O Notation (O): This provides an upper bound for the growth rate of the algorithm by bounding the function from above. 
+b. Omega notation (Ω): This provides the lower bound on an algorithm's time complexity.
+c. Theta notation (Θ): This combines the Big O and Omega notations and gives an upper as well as a lower bound for the algorithm's growth.
+​
+2. Space complexity:
+         
+Space complexity measures the algorithm's performance based on the amount of memory (space) it needs to run depending on the size of the input value. It is affected by the variables, data structures, and additional memory used during the algorithm's execution. Like time complexity, you can express it in asymptotic notation.
+ 
+Using asymptotic analysis, you can express the performance of an algorithm in the following terms:
+ 
+a. Best-case scenario: In the best-case scenario, data arrangement is such that the algorithm performs the best. For example, the most favorable input for a binary search algorithm would be if the target value lies in the center of the data.
+b. Worst-case scenario: This represents the worst possible performance of an algorithm, as it takes the most time and space. You can test the scalability and efficiency of the algorithm with this parameter.
+c. Average-case scenario: The average-case scenario represents the most realistic expected performance of the algorithm, as it is calculated by the average number of steps taken on any input size.
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​<br>______________________________________________<br>3. Describe the linear search algorithm<br>______________________________________________<br>The linear search algorithm is a sequential search method that looks for a target value within a collection of elements. It traverses the entire collection and checks each element one by one until the specific target value is found. It can be described with the following steps:
+ 
+
+
+Define a loop to traverse all the given elements
+
+
+Compare the target value with the current element value
+
+
+If it matches the target value, print the index of that element
+
+
+If it does not match the target value, move to the next element
+
+
+Repeat steps 2 through 4 until the target value is found
+
+
+If the entire collection is traversed but the target value is not found, print ‘target value not found’
+
+
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​<br>______________________________________________<br>4. What is a sorting algorithm?<br>______________________________________________<br>Sorting is an important function in programming as it helps in storing and retrieving data. A sorting algorithm arranges elements in a specific order — such as ascending or descending — depending on the comparison criterion. Here are some of the most well-known sorting algorithms:
+ 
+
+
+Bubble sort: The bubble sort algorithm works by comparing adjacent elements and swapping them if they are in the wrong order. The sorting process finishes when there is no further need for swapping.
+
+
+Insertion sort: Insertion sort builds a sorted array by inserting one element at a time. First, the array is separated into sorted and unsorted lists. Then, each element from the unsorted list is inserted into the sorted list until all the elements are in order.
+
+
+Quick sort: The quick sort algorithm is a divide-and-conquer algorithm that picks an element from an array as its pivot. Next, the array is partitioned depending on whether the element is greater or lesser than the pivot. The two partitions are then recursively sorted.
+
+
+Heap sort: The heap sort algorithm uses max-heap to build a heap from the given array. The maximum or minimum element is then repeatedly extracted and placed in its correct position until the sorting is completed.
+
+
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+ <br>______________________________________________<br>5. What is the difference between Breadth-first search (BFS) and Depth-first search (DFS) algorithms?<br>______________________________________________<br>Breadth-first search and Depth-first search are both algorithms for graph traversal, but there are fundamental differences in their search strategies: 
+ 
+
+
+Breadth-first search: Breadth-first search uses a breadth-ward motion to explore the graph. It starts at a specific node and visits all its neighboring nodes before going to the next level. This process is repeated on each level until the target is found. BFS uses a queue data structure to store the node values.
+
+
+Depth-first search: Depth-first search algorithms use a depthward motion to explore the graph. They start at a node and then explore all neighboring nodes to check all branches in depth before backtracking. They then use the stack data structure to store the node values.
+
+
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+ <br>______________________________________________<br>6. Write down a string reversal algorithm<br>______________________________________________<br>Here is a step-by-step algorithm to reverse a string of characters. For example, if you want to reverse 'Jake' to write 'ekaJ', you would follow these steps:
+ 
+Step 1: Start
+Step 2: Initiate two pointers — variables 'l' and 'r'
+Step 3: Set the value of 'l' as 0 and the value of 'r' as (length of the string -1)
+Step 4: Interchange the values of 'l' and 'r' in the string
+Step 5: Increase the value of 'l' by 1
+Step 6: Decrease the value of 'r' by 1
+Step 7: Step 4 is repeated until the value of 'r' is less than the value of 'l'
+Step 8: Stop
+​
+​
+​
+​
+​
+​
+​
+​
+​
+ <br>______________________________________________<br>7. What is a greedy algorithm? Where can they be used?<br>______________________________________________<br>A greedy algorithm aims to make the optimal decision at each sub-step of the process, which leads to a globally optimal solution. Using this approach, a greedy algorithm chooses the best answer available at the time without much regard for the consequences. You can use greedy algorithms to find solutions for the following:
+ 
+
+
+Job Scheduling Problem
+
+
+Knapsack Problem (Fractional Knapsack)
+
+
+Coin Change
+
+
+Prim's Minimal Spanning Tree Algorithm
+
+
+Kruskal's Minimum Spanning Tree Algorithm
+
+
+Travelling Salesman Problem
+
+
+​
+​
+​
+​
+​
+​
+​
+​
+​<br>______________________________________________<br>8. How can you swap two integers in Java without swapping the temporary variable?<br>______________________________________________<br>This is a very common trick question asked in coding interviews. Without using a temporary variable, there are two algorithms for Java to solve this problem:
+ 
+
+
+Using mathematical procedures: If a=2 and b=3 and we want to switch the values of 'a' and 'b', we can apply this algorithm
+
+a= a + b;
+b= a - b;
+a= a - b;
+
+This works as long as the addition and subtraction do not result in integer overflow. (Extra points if you mention this in your interview!)
+ 
+
+
+Using the XOR trick: This is the best approach as it does not risk integer overflow. The XOR bitwise operator is denoted by the symbol '^'
+
+x = x ^ y; 
+y = x ^ y; 
+x = x ^ y;
+
+
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​<br>______________________________________________<br>9. What is Dynamic Programming? List some of its applications<br>______________________________________________<br>Dynamic Programming is an approach to recursion optimization that works by simply saving the results of subproblems in a table or memoization cache so that they don’t need to be recalculated. You can reduce the time complexity of an algorithm from exponential to polynomial with dynamic programming. Some of its applications include the following: 
+ 
+
+
+Finding the nth Fibonacci number
+
+
+Solving the discrete (or 0-1) Knapsack Problem
+
+
+Calculating the shortest path between any two nodes in a graph (Floyd Warshall Algorithm)
+
+
+Finding the longest palindromic substring in a string
+
+
+​
+​
+​
+​
+​
+​
+​
+​
+​<br>______________________________________________<br>10. What is the use of a Hash algorithm?<br>______________________________________________<br>A hashing algorithm is a hash function that takes a string of any length and transforms it into a unique fixed-size string of characters called the hash value. Due to its irreversibility and deterministic properties, you can use the hash function for the following purposes: 
+ 
+
+
+Password storage
+
+
+Data retrieval
+
+
+Cryptographic systems
+
+
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​<br>______________________________________________<br>

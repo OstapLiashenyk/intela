@@ -1,0 +1,63 @@
+1. What are the key features of Python?<br>______________________________________________<br>Python boasts the following features:
+ 
+
+
+Python is free and open-source: Python is available for free on its official website. Being open-source, its source code is accessible to everyone, allowing you to freely download, use, and share it.
+
+
+Python supports GUI programming: You can create graphical user interfaces using modules like PyQt5, PyQt4, wxPython, or Tk.
+
+
+It supports object-oriented programming: Python is an object-oriented programming language in which objects are associated with both properties and methods.
+
+
+It’s simple to learn to write code in Python: Because Python is a high-level programming language that is simpler to learn, coding in Python is straightforward. Even beginners can grasp its basics quickly. This makes Python developer-friendly.
+
+
+It is a portable language: You can run Python code on any platform, so if something is written on Windows, it can run on other operating systems as well.
+
+
+Python is an interpreted language: This means that the Python program's source code is converted into bytecode, which is subsequently executed by the Python virtual machine. This distinguishes Python from other compiled languages like C and C++, where the code undergoes a build and linking process.
+
+<br>______________________________________________<br>2. Explain the difference between lists and tuples in Python.<br>______________________________________________<br>The main difference between lists and tuples is that tuples are immutable — they can’t be changed. On the other hand, lists are mutable and can be modified. However, lists are less memory-efficient than tuples.<br>______________________________________________<br>3. What does PEP 8 mean?<br>______________________________________________<br>PEP 8 stands for Python Enhancement Proposal 8. It presents coding standards for Python programming. These guidelines help in writing clear, skillfully indented code.<br>______________________________________________<br>4. What is type conversion in Python?<br>______________________________________________<br>When you change the value of one data type (like integer, string, float) to another in Python, it’s called type conversion. There are two main type conversion methods: Implicit Type Conversion and Explicit Type Conversion.<br>______________________________________________<br>5. What is Python Path?<br>______________________________________________<br>Pythonpath is an environment variable that directs the Python interpreter to locate libraries and applications. It functions the same way as the PATH environment variable in languages like C but includes extra directories for Python modules.<br>______________________________________________<br>6. What are namespaces in Python?<br>______________________________________________<br>A namespace is like a dictionary of established symbols paired with details about the objects they point to. The object names serve as keys, and the associated objects represent the values.<br>______________________________________________<br>Advanced Python Interview Questions<br>______________________________________________<br>7. When do you use *args and **kwargs in Python?<br>______________________________________________<br>When you are unsure about the number of keyword arguments to pass to a function, you can use *args and **kwargs as arguments of a function. It should be noted that *args are always used before **kwargs.<br>______________________________________________<br>8. What is SVM in Python?<br>______________________________________________<br>Support Vector Machines (SVMs) are supervised learning algorithms used for classification, regression, and detecting outliers. One of their main benefits is their efficiency in handling high-dimensional spaces.<br>______________________________________________<br>9. Why do you use self in Python?<br>______________________________________________<br>‘Self’ refers to the instance of the class in Python. Through ‘self,’ we can access the class’s attributes and methods. It associates the attributes with the provided arguments. The need for using ‘self’ arises because Python doesn’t employ the ‘@’ notation for referencing instance attributes.<br>______________________________________________<br>10. What are Python docstrings?<br>______________________________________________<br>A docstring is a text description embedded within a Python module, class, function, or method. This way, programmers can understand what the module does without seeing the details of the code itself. Often, these docstrings are used to automatically create online documentation.<br>______________________________________________<br>11. Why does Python use __ init __?<br>______________________________________________<br>In Python, the __init__ method is part of a class. Its purpose is to initialize the object’s attributes when you create it. When defining the __init__(self) method, ‘self’ is included as a default parameter in the argument list. This ‘self’ parameter refers to the instance of the class itself. It’s not important to always include an __init__ function, but if you don’t, Python will provide a default constructor for the class.<br>______________________________________________<br>Python Scripting Interview Questions<br>______________________________________________<br>12. Define pickling and unpickling.<br>______________________________________________<br>‘Pickling’ means the conversion of an object hierarchy into a byte stream. Conversely, ‘unpickling’ is the process of transforming a byte stream — either from a binary file or a bytes-like object — back into its original object hierarchy.<br>______________________________________________<br>13. How is memory managed in Python?<br>______________________________________________<br>Memory management in Python is handled through a private heap that stores all Python objects and data structures. The memory manager internally oversees the allocation and deallocation within this private heap. Reference counting tracks how often an object is referenced within a program. When this reference count drops to zero, it indicates that the object is no longer in use and is eligible for garbage collection.<br>______________________________________________<br>14. What is Flask in Python used for?<br>______________________________________________<br>Flask is a Python web framework that offers a range of handy tools and functionalities for crafting web apps and APIs in Python. It’s ideal for beginners as it allows for rapid development with just a single Python file.<br>______________________________________________<br>Python OOPS Interview Questions<br>______________________________________________<br>15. Describe how you can create an empty class in Python.<br>______________________________________________<br>You can create an empty class using the ‘pass’ statement. The ‘pass’ statement is a placeholder that does not act; it’s essentially a null operation. Despite being empty, you can still create objects from such a class. Take a look at the sample code for it below:
+
+
+       class EmptyClassExample:
+       pass
+       object=EmptyClassExample()
+       object.name="Educative"
+       print("Name assigned= ", obj.name)
+
+       Output: Name= Educative<br>______________________________________________<br>16. Explain, with an example, how inheritance works in Python.<br>______________________________________________<br>The concept of inheritance creates a relationship where certain classes inherit attributes and behaviors from a parent class. For instance, consider a parent class named ‘Bird’ and a child class called ‘Parrot.’ In this context, ‘Parrot’ would inherit characteristics from the ‘Bird’ class, making a Parrot a type of Bird. This ability makes it easier to develop and maintain applications.<br>______________________________________________<br>17. What is polymorphism in Python?<br>______________________________________________<br>Polymorphism allows us to use the same method in both the parent and the child classes. So, when you have a child class inheriting from a parent class, you can actually tweak the methods you’ve inherited without any fuss.<br>______________________________________________<br>Python Interview Questions for Data Science<br>______________________________________________<br>18. What are the commonly used Python libraries for data analysis?<br>______________________________________________<br>Here are some Python libraries used for data analysis:
+
+
+Numpy and Scipy for fundamental scientific computing
+
+
+Pandas for data manipulation and analysis
+
+
+Matplotlib for plotting and data visualization
+
+
+Scikit-learn for machine learning and data mining
+
+
+Keras for making deep learning models
+
+
+TensorFlow for building AI models
+
+<br>______________________________________________<br>Numpy Interview Questions<br>______________________________________________<br>19. What is NumPy?<br>______________________________________________<br>NumPy specializes in array handling. It offers tools for linear algebra, Fourier transforms, matrix operations, standard trigonometric functions, arithmetic operations functions, handling complex numbers, etc.<br>______________________________________________<br>20. List some uses of NumPy.<br>______________________________________________<br>Here are some NumPy operations that can help with scientific computing:
+ 
+
+
+Vector multiplication
+
+
+Matrix-to-matrix and matrix-to-vector multiplication
+
+
+Performing element-wise calculations on vectors and matrices (like addition, subtraction, multiplication, and division).
+
+<br>______________________________________________<br>

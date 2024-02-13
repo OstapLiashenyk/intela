@@ -1,0 +1,273 @@
+<div class="quiz_content">
+<div class="quiz_question">Q. Which of the following is a legal identifier in java ?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r1" name="que1" type="radio" value="a">
+<label for="r1"><span></span><b>A.</b> 2variable</label>
+</input></td>
+<td><input id="r2" name="que1" type="radio" value="b">
+<label for="r2"><span></span><b>B.</b> #myvar</label></input></td>
+</tr>
+<tr>
+<td><input id="r3" name="que1" type="radio" value="c"/>
+<label for="r3"><span></span><b>C.</b> +@$var</label></td>
+<td><input id="r4" name="que1" type="radio" value="d"/>
+<label for="r4"><span></span><b>D.</b> $_myvar</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>D<br>{'answer': 'Correct Answer : OPTION D, $_myvar. Because all identifier must start with either a letter( a to z or A to Z ) or currency character($) or an underscore. After the first character,an identifier can have any combination of character.'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. Which of these is NOT a valid keyword or reserved word in Java ?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r5" name="que2" type="radio" value="a"/>
+<label for="r5"><span></span><b>A.</b> default</label></td>
+<td><input id="r6" name="que2" type="radio" value="b"/>
+<label for="r6"><span></span><b>B.</b> null</label></td>
+</tr>
+<tr>
+<td><input id="r7" name="que2" type="radio" value="c"/>
+<label for="r7"><span></span><b>C.</b> String</label></td>
+<td><input id="r8" name="que2" type="radio" value="d"/>
+<label for="r8"><span></span><b>D.</b> volatile</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>C<br>{'answer': 'Correct Answer : OPTION C, String is not a keyword or a reserved word in java'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. Which is the legal range of values for a short ?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r9" name="que3" type="radio" value="a"/>
+<label for="r9"><span></span><b>A.</b> -128 to 127</label></td>
+<td><input id="r10" name="que3" type="radio" value="b"/>
+<label for="r10"><span></span><b>B.</b> -256 to 255</label></td>
+</tr>
+<tr>
+<td><input id="r11" name="que3" type="radio" value="c"/>
+<label for="r11"><span></span><b>C.</b> -32768 to 32767</label></td>
+<td><input id="r12" name="que3" type="radio" value="d"/>
+<label for="r12"><span></span><b>D.</b> 0 to 65535</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>C<br>{'answer': 'Correct Answer : OPTION C, Legal range for short data type is between -32768 to 32767.'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. Which of the following Array declaration statement is illegal ?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r13" name="que4" type="radio" value="a"/>
+<label for="r13"><span></span><b>A.</b> int [ ] a [ ] = new int [4] [4];</label></td>
+<td><input id="r14" name="que4" type="radio" value="b"/>
+<label for="r14"><span></span><b>B.</b> int a[ ][ ] = new int [4] [4];</label></td>
+</tr>
+<tr>
+<td><input id="r15" name="que4" type="radio" value="c"/>
+<label for="r15"><span></span><b>C.</b> int a[ ] [ ] = new int [ ] [4];</label></td>
+<td><input id="r16" name="que4" type="radio" value="d"/>
+<label for="r16"><span></span><b>D.</b> int [ ] a [ ] = new int [4] [ ];</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>C<br>{'answer': 'Correct Answer : OPTION C, <code>int a[ ] [ ] = new int [ ] [4]; because the size of the rows must always be mentioned.</code>'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. What will happen if you try to compile and run the following code ?</div>
+<pre><code class="language-java">
+    public class Test 
+    { 
+        public static void main(String argv[])
+        { 
+          int[] arr = new int[]{1,2,3};
+          System.out.println(arr[1]); 
+        } 
+    }
+    </code></pre>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r17" name="que5" type="radio" value="a"/>
+<label for="r17"><span></span><b>A.</b> 1</label></td>
+<td><input id="r18" name="que5" type="radio" value="b"/>
+<label for="r18"><span></span><b>B.</b> Error: arr is referenced before it is initialized</label> </td>
+</tr>
+<tr>
+<td><input id="r19" name="que5" type="radio" value="c"/>
+<label for="r19"><span></span><b>C.</b> 2</label></td>
+<td><input id="r20" name="que5" type="radio" value="d"/>
+<label for="r20"><span></span><b>D.</b> Error: size of array must be defined</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>C<br>{'answer': 'Correct Answer : OPTION C, 2'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. In the given Array declaration, which expression returns the output as 5 ?</div>
+<pre>int [] arr = { 23, 5, 78, 34, 2};</pre>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r21" name="que6" type="radio" value="a"/>
+<label for="r21"><span></span><b>A.</b> arr.length()</label></td>
+<td><input id="r22" name="que6" type="radio" value="b"/>
+<label for="r22"><span></span><b>B.</b> arr[].length()</label></td>
+</tr>
+<tr>
+<td><input id="r23" name="que6" type="radio" value="c"/>
+<label for="r23"><span></span><b>C.</b> arr[].length</label></td>
+<td><input id="r24" name="que6" type="radio" value="d"/>
+<label for="r24"><span></span><b>D.</b> arr.length</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>D<br>{'answer': 'Correct Answer : OPTION D, arr.length will print the size of array arr which is 5. length is not a method it is a operator used in java that return size of an array.'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. What will be the output upon the execution of the following code ?</div>
+<pre><code class="language-java">
+    public class Test
+    {
+      public static void main(String[] args)
+      {
+        int j = 5;
+        for (int i = 0; i&lt; j; i++)
+        {
+          if ( i &lt;= j-- )
+            System.out.print(  (i*j)  + " ");
+        }
+      }
+    }
+    </code></pre>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r25" name="que7" type="radio" value="a"/>
+<label for="r25"><span></span><b>A.</b> 0  3  2</label></td>
+<td><input id="r26" name="que7" type="radio" value="b"/>
+<label for="r26"><span></span><b>B.</b> 1  2  3</label></td>
+</tr>
+<tr>
+<td><input id="r27" name="que7" type="radio" value="c"/>
+<label for="r27"><span></span><b>C.</b> 0  3  4</label></td>
+<td><input id="r28" name="que7" type="radio" value="d"/>
+<label for="r28"><span></span><b>D.</b> 1  4  2</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>C<br>{'answer': 'Correct Answer : OPTION C, 0 3 4. Here for-loop will execute only three times. In first pass the value of i is 0 and j is 4. So 0*4 = 0 is printed. In second pass the value of i is 1 and 3 so it will print 3. In last pass the value of i is 2 and 2 so it will print 4'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. Which declaration of the main() method is valid ?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r29" name="que8" type="radio" value="a"/>
+<label for="r29"><span></span><b>A.</b> public void main( String args [] )</label></td>
+<td><input id="r30" name="que8" type="radio" value="b"/>
+<label for="r30"><span></span><b>B.</b> public void static main( String args [] )</label></td>
+</tr>
+<tr>
+<td><input id="r31" name="que8" type="radio" value="c"/>
+<label for="r31"><span></span><b>C.</b> final public static void main(String[] arr)</label></td>
+<td><input id="r32" name="que8" type="radio" value="d"/>
+<label for="r32"><span></span><b>D.</b> public static void main( String[] arr)</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>D<br>{'answer': 'Correct Answer : OPTION D, public static void main( String []arr)'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. Is <code>3 * 4</code> equivalent to <code>3 &lt;&lt; 2</code> ?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r33" name="que9" type="radio" value="a"/>
+<label for="r33"><span></span><b>A.</b> Yes</label></td>
+<td><input id="r34" name="que9" type="radio" value="b"/>
+<label for="r34"><span></span><b>B.</b> No</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>A<br>{'answer': 'Correct Answer : OPTION A, Yes'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. Which one of the following is invalid declaration of a <code>char</code> ?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r35" name="que10" type="radio" value="a"/>
+<label for="r35"><span></span><b>A.</b> char c1 = 064770;</label></td>
+<td><input id="r36" name="que10" type="radio" value="b"/>
+<label for="r36"><span></span><b>B.</b> char c2 = 'face';</label></td>
+</tr>
+<tr>
+<td><input id="r37" name="que10" type="radio" value="c"/>
+<label for="r37"><span></span><b>C.</b> char c3 = 0xbeef;</label></td>
+<td><input id="r38" name="que10" type="radio" value="d"/>
+<label for="r38"><span></span><b>D.</b> char c4 = '\uface';</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>B<br>{'answer': "Correct Answer : OPTION B, char c2 = 'face' "}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. What will be the output of the following code ?</div>
+<pre><code class="language-java">
+    public class Test {
+      public static void main(String[] args)
+      {
+        double d = 100.04;  
+        float f = d;	
+        System.out.println("Float value "+f);
+      }
+    }
+    </code></pre>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r39" name="que11" type="radio" value="a"/>
+<label for="r39"><span></span><b>A.</b> 100.04</label></td>
+<td><input id="r40" name="que11" type="radio" value="b"/>
+<label for="r40"><span></span><b>B.</b> 100.0</label></td>
+</tr>
+<tr>
+<td><input id="r41" name="que11" type="radio" value="c"/>
+<label for="r41"><span></span><b>C.</b> Compilation Error (lossy conversion from double to float)</label></td>
+<td><input id="r42" name="que11" type="radio" value="d"/>
+<label for="r42"><span></span><b>D.</b> 100</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>C<br>{'answer': 'Correct Answer : OPTION C, Compilation error. Because of incompatible type, assigning a larger type value to a variable of smaller type value.'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. Is it possible in Java to create arrays of length zero ?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r43" name="que12" type="radio" value="a"/>
+<label for="r43"><span></span><b>A.</b> Yes, you can create arrays of any type with length zero.</label></td>
+</tr><tr>
+<td><input id="r44" name="que12" type="radio" value="b"/>
+<label for="r44"><span></span><b>B.</b> No, it is not possible to create arrays of length zero in Java.</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>A<br>{'answer': 'Correct Answer : OPTION A. Yes, we can create arrays of any type with length zero but we can not do anything with it.'}<br>______________________________________________<br><div class="quiz_content">
+<div class="quiz_question">Q. Which operator will always evaluate all the Operands?</div>
+<div class="quiz_options">
+<table class="quiz">
+<tr>
+<td><input id="r45" name="que13" type="radio" value="a"/>
+<label for="r45"><span></span><b>A.</b> ||</label></td>
+<td><input id="r46" name="que13" type="radio" value="b"/>
+<label for="r46"><span></span><b>B.</b> &amp;&amp;</label></td>
+</tr>
+<tr>
+<td><input id="r47" name="que13" type="radio" value="c"/>
+<label for="r47"><span></span><b>C.</b> ?:</label></td>
+<td><input id="r48" name="que13" type="radio" value="d"/>
+<label for="r48"><span></span><b>D.</b> %</label></td>
+</tr>
+</table>
+</div>
+<div class="quiz_answer_holder alert alert-success d-none"></div>
+</div><br>D<br>{'answer': 'Correct Answer : OPTION D, %(modulus) will always evaluate both its operand. || will not evaluate the second condition if the first passes. && will not evaluate the second condition if the first fails. And ?: is also conditional.'}<br>______________________________________________<br>

@@ -1,0 +1,8 @@
+INSERT INTO category (name)
+VALUES ('Interwiew');
+INSERT INTO category (name)
+VALUES ('Soft');
+INSERT INTO category (name)
+VALUES ('Hard');
+INSERT INTO category (name)
+VALUES ('Test');
