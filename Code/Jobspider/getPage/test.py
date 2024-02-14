@@ -63,5 +63,6 @@ def getPageQuestions(url): # Returns an list of objects
     return question  # Return the list of Question objects
 
 # Example usage
-scraped_questions = getPageQuestions("https://www.jobspider.com/job/view-resume-39673.html")
-print(scraped_questions)
+
+# scraped_questions = getPageQuestions("https://www.jobspider.com/job/view-resume-39673.html")
+# print(scraped_questions)

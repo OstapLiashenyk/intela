@@ -20,74 +20,47 @@ session = requests.Session()
 
 def get_Links(place):
         links = place.find_all('a')  # Find all <a> tags
-        urls = [link.get('href') for link in links if link.get('href')]
+        urls = [ f"https://www.jobspider.com/{link.get('href')}" for link in links if link.get('href') and link.get('href') != "#"]
         return urls
-def get_jobSpider():
-    url = 'https://www.indiabix.com/'
+def get_jobSpider(url):
     headers = {'User-Agent': UserAgent}  # Corrected header name
-
     try:
-        response = requests.get(url, headers=headers,verify=False)
+        response = requests.get(url, headers=headers)
         response.raise_for_status()
 
         soup = BeautifulSoup(response.text, "html.parser")
 
-        #Programming
-        row = soup.findAll('div', class_="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 mt-20")[-6]
-        programming = row.find('ul')
-        languages = get_Links(programming)
+        main_block = soup.find_all('font', face = 'arial', size ='2')[1]
+        links = get_Links(main_block)
+        pages_links = []
+        for link in links:
+            if link in pages_links:
+                continue
+            if "page" in link:
+                pages_links.append(link)
+                print(f' page = {link}')
 
-        #Get languages
-        for language_url in languages:
-            try:
-                resp = requests.get(language_url , headers=headers, verify=False)
-                sop = BeautifulSoup(resp.text, "html.parser")
+        page_number = 1
+        while True:
+            resums_tbale = main_block.find('table', border="1", cellpadding="2", cellspacing="0", bordercolor="#336699", width="100%")
+            resums = resums_tbale.find('tr').find_next_siblings()
+            for resum in resums:
+                columns = resum.find_all('td')
+                id = columns[0]
+                posted = columns[1]
+                jobFunctionSought = columns[2]
+                desiredIndustry = columns[3]
+                location = columns[4]
+                resume_link = get_Links(columns[5])
 
-                wrapper = sop.find('div', class_ = "topics-wrapper")
-                div = wrapper.find('ul', class_ = "need-ul-filter")
-                topics = get_Links(div)
+                print(id, posted, jobFunctionSought ,desiredIndustry, location, resume_link)
+                print(123)
+            if page_number > 0:
+                break
 
-                #Get Topics
-                for topic_url in topics:
-                    try:
-                        print(topic_url)
-                        resp = requests.get(topic_url, headers=headers, verify=False)
-                        sop = BeautifulSoup(resp.text, "html.parser")
-                        exercises = sop.find('div', class_ = "scrolly-250 scrolly-bg1")
-                        pages = get_Links(exercises)
-
-                        questions = []
-
-                        pageQuestion = getPageQuestions(topic_url)
-                        for question in pageQuestion:
-                            questions.append(question)
-                            print(question)
-
-                        # for question in questions:
-                        #     print(question)
-
-                        for page_url in pages:
-                            resp = requests.get(page_url, headers=headers, verify=False)
-                            sop = BeautifulSoup(resp.text, "html.parser")
-
-                            pageQuestion = getPageQuestions(page_url)
-
-                            for question in pageQuestion:
-                                questions.append(question)
-                                print(question)
-                    except Exception as err:
-                        print(f'UMPALUMPA Error fetching or parsing page at {page_url}: {err}')
-                print("________________________________________________________________")
-
-
-            except Exception as err:
-                print(f'UMPALUMPA Error fetching or parsing topic at {topic_url}: {err}')
-
-
-    except requests.HTTPError as http_err:
-        print(f'UMPALUMPA HTTP error occurred: {http_err}')
     except Exception as err:
         print(f'UMPALUMPA Other error occurred: {err}')
+
 #Here to code
 print('I Do start')
-get_jobSpider()
+get_jobSpider('https://www.jobspider.com/job/resume-search-results.asp/category_121')
