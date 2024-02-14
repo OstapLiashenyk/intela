@@ -15,9 +15,8 @@ UserAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gec
 now = datetime.now().replace(second=0, microsecond=0)
 print(now)
 
-session = requests.Session()
-#draft_database.create_tables([TestsS])
-
+draft_database.create_tables([TestsS])
+print(123)
 def get_Links(place):
         links = place.find_all('a')  # Find all <a> tags
         urls = [ f"https://www.jobspider.com/{link.get('href')}" for link in links if link.get('href') and link.get('href') != "#"]
@@ -54,6 +53,29 @@ def get_jobSpider(url):
                 resume_link = get_Links(columns[5])
 
                 print(id, posted, jobFunctionSought ,desiredIndustry, location, resume_link)
+                resume = getPageQuestions(resume_link[0])
+                resume.id = id
+                resume.posted = posted
+                resume.jobFunctionSought = jobFunctionSought
+                resume.desiredIndustry = desiredIndustry
+                resume.location = location
+                print(resume)
+
+                rc1 = TestsS.insert({
+                    #'id' : resume.id.text,
+                    'posted' : resume.posted,
+                    'jobFunctionSough' : resume.jobFunctionSought,
+                    'desiredIndustry' : resume.desiredIndustry,
+                    'location' : resume.location,
+                    'objective' : resume.objective,
+                    'experience' : resume.experience,
+                    'education' : resume.education,
+                    'affiliations' : resume.affiliations,
+                    'skills' : resume.skills,
+                    'additionalInformation' : resume.additionalInformation,
+                    'reference' : resume.reference
+                }).on_conflict_ignore().as_rowcount().execute()
+                print(resume.id.text , ' ',resume.objective ,' ', rc1)
                 print(123)
             if page_number > 0:
                 break

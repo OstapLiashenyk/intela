@@ -9,10 +9,10 @@ class BaseModel(Model):
         database = draft_database
         legacy_table_names = False
 
-# Define your Peewee model with the required fields
+
 class TestsS(BaseModel):
-    id = IntegerField()
-    posted = DateTimeField(null=True)
+    id = AutoField()
+    posted = CharField(null=True)
     jobFunctionSough = CharField(null=True)
     desiredIndustry = CharField(null=True)
     location = CharField(null=True)
